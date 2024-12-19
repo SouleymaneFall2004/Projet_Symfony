@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Articles</title>
+    <link rel="stylesheet" href="css/tailwind.css">
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+    <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar"
+        type="button"
+        class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+        <span class="sr-only">Open sidebar</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" fill-rule="evenodd"
+                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+            </path>
+        </svg>
+    </button>
+
+    <aside id="default-sidebar"
+        class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+        aria-label="Sidebar">
+        <div class="h-full px-3 py-3 overflow-y-auto bg-gray-900">
+            <ul class="space-y-3 font-medium">
+                <div class="mb-8 text-3xl">
+                    <li>
+                        <a href="#"
+                            class="flex items-center bg-white p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-milk">
+                                <path d="M8 2h8" />
+                                <path
+                                    d="M9 2v2.789a4 4 0 0 1-.672 2.219l-.656.984A4 4 0 0 0 7 10.212V20a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-9.789a4 4 0 0 0-.672-2.219l-.656-.984A4 4 0 0 1 15 4.788V2" />
+                                <path d="M7 15a6.472 6.472 0 0 1 5 0 6.47 6.47 0 0 0 5 0" />
+                            </svg>
+                            <span class="ms-3">Meww Shop</span>
+                        </a>
+                    </li>
+                </div>
+                <div class="space-y-5">
+                    <li>
+                        <a href="/client"
+                            class="flex items-center p-2 text-white rounded-lg hover:bg-gray-100 hover:text-gray-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-file-user">
+                                <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                                <path d="M15 18a3 3 0 1 0-6 0" />
+                                <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z" />
+                                <circle cx="12" cy="13" r="2" />
+                            </svg>
+                            <span class="flex-1 ms-3 text-xl whitespace-nowrap">Clients</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/article"
+                            class="flex items-center p-2 text-white rounded-lg hover:bg-gray-100 hover:text-gray-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-shopping-basket">
+                                <path d="m15 11-1 9" />
+                                <path d="m19 11-4-7" />
+                                <path d="M2 11h20" />
+                                <path d="m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4" />
+                                <path d="M4.5 15.5h15" />
+                                <path d="m5 11 4-7" />
+                                <path d="m9 11 1 9" />
+                            </svg>
+                            <span class="flex-1 ms-3 text-xl whitespace-nowrap">Articles</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/dette"
+                            class="flex items-center p-2 text-white rounded-lg hover:bg-gray-100 hover:text-gray-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-shopping-cart">
+                                <circle cx="9" cy="21" r="1" />
+                                <circle cx="20" cy="21" r="1" />
+                                <path d="M1 1h4l2 7h11l2-7h4" />
+                                <path d="M6 8h12l-1.5 6H7.5L6 8z" />
+                            </svg>
+
+                            <span class="flex-1 ms-3 text-xl whitespace-nowrap">Dette</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/user"
+                            class="flex items-center p-2 text-white rounded-lg hover:bg-gray-100 hover:text-gray-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-user-check">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <polyline points="16 11 18 13 22 9" />
+                            </svg>
+
+                            <span class="flex-1 ms-3 text-xl whitespace-nowrap">User</span>
+                        </a>
+                    </li>
+
+                    <li class="absolute bottom-0">
+                        <a href=""
+                            class="flex items-center p-2 text-white rounded-lg hover:bg-gray-100 hover:text-gray-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-logout">
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                                <polyline points="16 17 21 12 16 7" />
+                                <line x1="21" y1="12" x2="9" y2="12" />
+                            </svg>
+                            <span class="flex-1 ms-3 text-xl whitespace-nowrap">Logout</span>
+                        </a>
+                    </li>
+
+                </div>
+            </ul>
+        </div>
+    </aside>
+    <header class="sticky top-0 left-0 right-0 z-10">
+        <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+            <div class="flex items-center justify-end">
+                <div class=" flex justify-center items-center">
+                    <div x-data="{ open: false }" class="w-32 flex justify-center items-center">
+                        <div @click="open = !open" class="relative border-b-4 border-transparent py-3"
+                            :class="{'border-indigo-700 transform transition duration-300 ': open}"
+                            x-transition:enter-end="transform opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-75"
+                            x-transition:leave-start="transform opacity-100 scale-100">
+                            <div class="flex justify-center shadow-sm  items-center space-x-3 cursor-pointer">
+                                <div class="w-9 h-9 rounded-full overflow-hidden  dark:border-white ">
+                                    <img src="" alt="" class="w-full h-full object-cover">
+                                </div>
+                                <div class="font-semibold dark:text-white -space-x-2 text-gray-900 ">
+                                    <div class="cursor-pointer">
+                                        <span class="text-xl ">NampMeew </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+        </nav>
+    </header>
+
+    <main class="p-4 sm:ml-64  overflow-hidden">
+        <div class="w-full max-w-4xl  mx-auto flex justify-end">
+            <button
+                class="flex items-center px-5 py-3    bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-500 transition duration-200 ">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+                <a href="/userstore">Ajouter</a>
+            </button>
+        </div>
+        <h1 class="text-3xl text-center font-bold text-gray-800 mb-6 ">Liste des utilisateurs</h1>
+        <div class="w-full max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+            <table id="usersTable" class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase  dark:bg-gray-700 dark:text-gray-400  bg-gray-900">
+                    <tr>
+                        <th class="py-3 px-6 text-left">id</th>
+                        <th class="py-3 px-6 text-left">email</th>
+                        <th class="py-3 px-6 text-left">Login</th>
+
+                    </tr>
+                </thead>
+                <tbody id="usersBody" class="text-gray-700 text-sm divide-y divide-gray-200">
+                    <!-- Les utilisateurs seront ajoutés ici par JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination mt-6 flex justify-center space-x-4">
+            <button id="prev" disabled
+                class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed">Précédent</button>
+            <button id="next"
+                class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 disabled:bg-gray-300 disabled:cursor-not-allowed">Suivant</button>
+        </div>
+    </main>
+    <script src="/js/user/index.js"></script>
+</body>
+
+</html>
